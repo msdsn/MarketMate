@@ -4,7 +4,7 @@
 
 `git clone git@github.com:msdsn/MarketMate.git`
 
-`git checkout f0f6efa4168b248a57e9b82815608d3cd6c1e601`
+`git checkout 97b8881db5a81e5e00b39f67bbef66470849039a`
 
 ## Localde başlat
 

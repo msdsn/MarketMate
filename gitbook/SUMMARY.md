@@ -1,6 +1,6 @@
 # Table of contents
 
 * [📈 Market Mate](README.md)
-* [🗓️ Uygulama Adımları](uygulama-adimlari.md)
-* [🔁 SDLC](sdlc.md)
-* [🐢 Django Başlangıç](django-baslangic.md)
+  * [🔁 SDLC](market-mate/sdlc.md)
+* [🗓️ Uygulama Adımları](uygulama-adimlari/README.md)
+  * [🐢 Django Başlangıç](uygulama-adimlari/django-baslangic.md)
