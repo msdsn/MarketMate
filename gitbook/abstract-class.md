@@ -12,6 +12,7 @@
 
 Bir çok model olduğunda bir abstract class yazıp bunu kullanabiliriz.
 
+{% code title="stock/models.py" %}
 ```python
 class UpdateCreate(models.Model):
     created = models.DateTimeField(auto_now_add=True)
@@ -29,3 +30,6 @@ class Purchases(UpdateCreate):
 class Sales(UpdateCreate):
     # ...
 ```
+{% endcode %}
+
+{% @github-files/github-code-block url="https://github.com/msdsn/MarketMate/raw/0db0cd44d7aaf0b0d9f8b241141fff1e42f871a0/stock/models.py" %}
