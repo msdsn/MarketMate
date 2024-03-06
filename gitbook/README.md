@@ -6,8 +6,8 @@ description: Ürünlerin stock takibini yapmak için hazırlanmış bir uygulama
 
 ## Başlarken
 
-BRD dökümanı hazırlandı, Tasarım oluşturuldu, ERD diyagramı oluşturuldu -> [SDLC](market-mate/sdlc.md)
+BRD dökümanı hazırlandı, Tasarım oluşturuldu, ERD diyagramı oluşturuldu -> [SDLC](yardimci-sayfalar/sdlc.md)
 
 <figure><img src=".gitbook/assets/ERD.png" alt=""><figcaption></figcaption></figure>
 
-### Uygulama Adımlarına ulaşmak için[ tıkla ](uygulama-adimlari/)
+### Uygulama Adımlarına ulaşmak için[ tıkla ](uygulama-adimlari.md)
