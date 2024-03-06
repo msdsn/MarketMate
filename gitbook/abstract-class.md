@@ -1,4 +1,4 @@
-# Abstract Class
+# 🎁 Abstract Class
 
 ## Burdan Başla:
 
@@ -10,3 +10,22 @@
 
 ***
 
+Bir çok model olduğunda bir abstract class yazıp bunu kullanabiliriz.
+
+```python
+class UpdateCreate(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        abstract = True
+
+class Product(UpdateCreate):
+    # ...
+class Firm(UpdateCreate):
+    # ...
+class Purchases(UpdateCreate):
+    # ...
+class Sales(UpdateCreate):
+    # ...
+```
