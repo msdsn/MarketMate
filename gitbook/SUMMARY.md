@@ -2,8 +2,9 @@
 
 * [📈 Market Mate](README.md)
 * [🗓️ Uygulama Adımları](uygulama-adimlari.md)
-* [Modelleri Oluştur](modelleri-olustur.md)
+* [🚂 Modelleri Oluştur](modelleri-olustur.md)
 * [🎁 Abstract Class](abstract-class.md)
+* [🛫 ilk endpoint](ilk-endpoint.md)
 
 ## Yardımcı Sayfalar
 
