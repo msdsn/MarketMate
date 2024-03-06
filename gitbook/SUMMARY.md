@@ -5,6 +5,7 @@
 * [🚂 Modelleri Oluştur](modelleri-olustur.md)
 * [🎁 Abstract Class](abstract-class.md)
 * [🛫 ilk endpoint](ilk-endpoint.md)
+* [🛒 Product Count Bilgisi Göder](product-count-bilgisi-goeder.md)
 
 ## Yardımcı Sayfalar
 

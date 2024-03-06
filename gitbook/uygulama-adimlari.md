@@ -4,8 +4,7 @@
 
 ## Adım adım
 
-1. `python manage.py startapp stock`
-2. Modelleri başlat
+`python manage.py startapp stock`
 
 <figure><img src=".gitbook/assets/ERD.png" alt=""><figcaption></figcaption></figure>
 
@@ -14,3 +13,5 @@
 ### [Abstract class olustur](abstract-class.md)
 
 ### [Ilk endpointi oluştur](ilk-endpoint.md)
+
+### [Product count bilgisi gönder](product-count-bilgisi-goeder.md)
