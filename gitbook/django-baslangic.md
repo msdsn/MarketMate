@@ -1,15 +1,15 @@
 # 🐢 Django Başlangıç
 
-##
+## Start Project
 
-## python3 -m venv env
+`git clone git@github.com:msdsn/MarketMate.git`
 
-## source env/bin/activate
+`git checkout f0f6efa4168b248a57e9b82815608d3cd6c1e601`
 
-## pip install djangorestframework
+## Localde başlat
 
-## pip install python-decouple
+`python3 -m venv env`
 
-## django-admin startproject main .
+`source env/bin/activate`
 
-## python manage.py migrate
+`pip install -r requirements.txt`
