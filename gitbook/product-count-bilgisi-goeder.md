@@ -4,6 +4,12 @@ description: Amacımız url e gittiğimizde categorilerdeki product sayıların�
 
 # 🛒 Product Count Bilgisi Göder
 
+### Burdan Başla
+
+`git checkout 62d8faf6951748e17f4d82b33d69fbf3c082d74d`
+
+***
+
 ### <mark style="color:purple;">end point:</mark> `http://127.0.0.1:8000/stock/categories/`
 
 ### <mark style="background-color:red;">Öncesi:</mark>
