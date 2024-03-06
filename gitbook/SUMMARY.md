@@ -2,6 +2,7 @@
 
 * [📈 Market Mate](README.md)
 * [🗓️ Uygulama Adımları](uygulama-adimlari.md)
+* [Abstract Class](abstract-class.md)
 
 ## Yardımcı Sayfalar
 
