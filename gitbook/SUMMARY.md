@@ -9,6 +9,7 @@
 * [🔎 Search özelliği](search-oezelligi.md)
 * [🪟 Fitreleme](fitreleme.md)
 * [🍳 Categorideki Productlarıda Döndür](categorideki-productlarida-doenduer.md)
+* [🦉 Endpointe Permissions Ekle](endpointe-permissions-ekle.md)
 
 ## Yardımcı Sayfalar
 
