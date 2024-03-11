@@ -58,4 +58,29 @@ class FirmSerializer(serializers.ModelSerializer):
             'image',
         )
 
+class PurchasesSerializer(serializers.ModelSerializer):
+
+    user = serializers.StringRelatedField()
+    firm = serializers.StringRelatedField()
+    product = serializers.StringRelatedField()
+    brand = serializers.StringRelatedField()
+    class Meta:
+        model = Purchases
+        fields = (
+            'id',
+            'user',
+            'user_id',
+            'firm',
+            'firm_id',
+            'product',
+            'product_id',
+            'brand',
+            'brand_id',
+            'quantity',
+            'price',
+            'price_total',
+            'created',
+            'updated'
+        )
+
     

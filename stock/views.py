@@ -1,6 +1,6 @@
 from rest_framework import viewsets, filters
 from .models import Category, Brand, Product, Firm, Purchases, Sales
-from .serializers import CategorySerializer, CategoryProductSerializer, BrandSerializer, FirmSerializer, ProductSerializer
+from .serializers import CategorySerializer, CategoryProductSerializer, BrandSerializer, FirmSerializer, ProductSerializer, PurchasesSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import DjangoModelPermissions
 
@@ -37,6 +37,15 @@ class ProductView(viewsets.ModelViewSet):
     permission_classes = [DjangoModelPermissions]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     search_fields = ['category', 'brand']
+
+
+class PurchasesView(viewsets.ModelViewSet):
+    queryset = Purchases.objects.all()
+    serializer_class = PurchasesSerializer
+    permission_classes = [DjangoModelPermissions]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    search_fields = ['product', 'firm']
+    filterset_fields = ['product', 'firm']
 
 
 
