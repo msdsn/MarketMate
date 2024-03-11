@@ -12,6 +12,7 @@
 * [🦉 Endpointe Permissions Ekle](endpointe-permissions-ekle.md)
 * [📙 Brand - Frim islemleri](brand-frim-islemleri.md)
 * [⚾ Product enpointini düzelt](product-enpointini-duezelt.md)
+* [❤️‍🔥 Purchases için endpoint yap](purchases-icin-endpoint-yap.md)
 
 ## Yardımcı Sayfalar
 
