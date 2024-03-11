@@ -13,6 +13,7 @@
 * [📙 Brand - Frim islemleri](brand-frim-islemleri.md)
 * [⚾ Product enpointini düzelt](product-enpointini-duezelt.md)
 * [❤️‍🔥 Purchases için endpoint yap](purchases-icin-endpoint-yap.md)
+* [🤩 Purchase yapıldığında stock güncelle](purchase-yapildiginda-stock-guencelle.md)
 
 ## Yardımcı Sayfalar
 
