@@ -106,6 +106,48 @@ class PurchasesSerializer(serializers.ModelSerializer):
         #return datetime.datetime.strftime(obj.created, '%Y-%m-%d')
         return obj.created.strftime("%Y-%m-%d")
     
+
+class SalesSerializer(serializers.ModelSerializer):
+
+    user = serializers.StringRelatedField()
+    product = serializers.StringRelatedField()
+    brand = serializers.StringRelatedField()
+    product_id = serializers.IntegerField()
+    brand_id = serializers.IntegerField()
+    category = serializers.SerializerMethodField()
+    time_hour = serializers.SerializerMethodField()
+    time_day = serializers.SerializerMethodField()
+    class Meta:
+        model = Sales
+        fields = (
+            'id',
+            'user',
+            'category',
+            'product',
+            'product_id',
+            'brand',
+            'brand_id',
+            'quantity',
+            'price',
+            'price_total',
+            'time_hour',
+            'time_day',
+            
+        )
+
+    def get_category(self, obj):
+        # product = Product.objects.get(id=obj.product_id)
+        # return Category.objects.get(id=product.category_id).name
+        return obj.product.category.name
+    
+    def get_time_hour(self, obj):
+        #return datetime.datetime.strftime(obj.created, '%H:%M')
+        return obj.created.strftime('%H:%M')
+    
+    def get_time_day(self, obj):
+        #return datetime.datetime.strftime(obj.created, '%Y-%m-%d')
+        return obj.created.strftime("%Y-%m-%d")
+    
     
 
     
