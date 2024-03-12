@@ -33,3 +33,39 @@ class PurchasesView(viewsets.ModelViewSet):
 
 ## Increase Stock:
 
+Kullanıcıyı serializer'a ekle ve ilgili product için stock güncelle
+
+```python
+class PurchasesView(viewsets.ModelViewSet):
+    # ...
+    def create(self, request, *args, **kwargs):
+        # ...
+        # increase stock
+        purchase = request.data
+        product = Product.objects.get(id=purchase['product_id'])
+        product.stock += purchase['quantity']
+        product.save()
+        # --------------
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+```
+
+## Deneme:
+
+### &#x20;<mark style="background-color:red;">Dene:</mark>  `http://127.0.0.1:8000/stock/purchases/`
+
+### &#x20;<mark style="background-color:red;">Veri:</mark> &#x20;
+
+*   ```json
+    {
+    ```
+
+    ```postman_json
+        "firm_id": 1,
+        "product_id": 1,
+        "brand_id": 1,
+        "quantity": 10,
+        "price": 5
+    }
+    ```
+
