@@ -69,6 +69,7 @@ class PurchasesSerializer(serializers.ModelSerializer):
     firm_id = serializers.IntegerField()
     product_id = serializers.IntegerField()
     brand_id = serializers.IntegerField()
+    category = serializers.SerializerMethodField()
     class Meta:
         model = Purchases
         fields = (
@@ -76,6 +77,7 @@ class PurchasesSerializer(serializers.ModelSerializer):
             'user',
             'firm',
             'firm_id',
+            'category',
             'product',
             'product_id',
             'brand',
@@ -86,5 +88,10 @@ class PurchasesSerializer(serializers.ModelSerializer):
             'created',
             'updated'
         )
+
+    def get_category(self, obj):
+        # product = Product.objects.get(id=obj.product_id)
+        # return Category.objects.get(id=product.category_id).name
+        return obj.product.category.name
 
     

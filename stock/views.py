@@ -93,6 +93,7 @@ class PurchasesView(viewsets.ModelViewSet):
         # decrease stock
         product = Product.objects.get(id=instance.product_id)
         product.stock -= instance.quantity
+        product.stock = min(product.stock, 0)
         product.save()
         # --------------
         self.perform_destroy(instance)
