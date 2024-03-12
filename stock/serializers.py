@@ -14,6 +14,8 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     category = serializers.StringRelatedField()
     brand = serializers.StringRelatedField()
+    category_id = serializers.IntegerField()
+    brand_id = serializers.IntegerField()
     class Meta:
         model = Product
         fields = (
@@ -64,12 +66,14 @@ class PurchasesSerializer(serializers.ModelSerializer):
     firm = serializers.StringRelatedField()
     product = serializers.StringRelatedField()
     brand = serializers.StringRelatedField()
+    firm_id = serializers.IntegerField()
+    product_id = serializers.IntegerField()
+    brand_id = serializers.IntegerField()
     class Meta:
         model = Purchases
         fields = (
             'id',
             'user',
-            'user_id',
             'firm',
             'firm_id',
             'product',

@@ -4,6 +4,9 @@ from .serializers import CategorySerializer, CategoryProductSerializer, BrandSer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import DjangoModelPermissions
 
+from rest_framework.response import Response
+from rest_framework import status
+
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
@@ -46,6 +49,22 @@ class PurchasesView(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     search_fields = ['product', 'firm']
     filterset_fields = ['product', 'firm']
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        # increase stock
+        purchase = request.data
+        product = Product.objects.get(id=purchase['product_id'])
+        product.stock += purchase['quantity']
+        product.save()
+        # --------------
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
 
 
